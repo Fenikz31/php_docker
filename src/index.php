@@ -1,5 +1,6 @@
 <?php
+  // require_once './config/config.php';
+  require_once 'app/init.php';
 
-echo "Hello world!";
-
+  new App;
 ?>
