@@ -3,6 +3,7 @@ version: '3.9'
 services:
   php-env:
     build: .
+    container_name: php_docker_tutorial
     volumes:
       - ./src:/var/www/html
     ports:
