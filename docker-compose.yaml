@@ -8,3 +8,13 @@ services:
       - ./src:/var/www/html
     ports:
       - 85:80
+
+  db:
+    image: mysql
+    container_name: php_docker_tutorial_mysql_db
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - 3307:3306
