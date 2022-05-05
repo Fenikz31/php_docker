@@ -1,10 +1,19 @@
 version: '3.9'
 
 services:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    ports: 
+      - 85:80
+    volumes:
+      - ./src/:/var/www/html
+      - ./logs/nginx:/var/log/nginx/
   php-env:
-    build: .
-    container_name: php_docker_tutorial
+    image: php:fpm-alpine
+    # build: .
+    # container_name: php_docker_tutorial
     volumes:
       - ./src:/var/www/html
-    ports:
-      - 85:80
+      - ./logs/php.log:/var/log/fpm-php.www.log
