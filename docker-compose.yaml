@@ -5,7 +5,6 @@ services:
     # build: .
     container_name: onlinequiz
     image: fenikz/onlinequiz:1.0.0
-    hostname: onlinequiz.fenikz.tk
     volumes:
       - ./src:/var/www/html
       - ./logs:/var/log
