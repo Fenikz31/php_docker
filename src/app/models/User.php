@@ -20,7 +20,7 @@ class User extends Database
         $stmt = self::$_connection->prepare($sql);
         $stmt->bindParam(':username', $this->username, PDO::PARAM_STR);
         $stmt->bindParam(':email', $this->email);
-        $stmt->bindParam(':password_hash', $this->passwordHash);
+        $stmt->bindParam(':password_hash', $this->password_hash);
         $stmt->bindParam(':role', $this->role);
         $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_CLASS, 'User');

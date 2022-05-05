@@ -6,6 +6,7 @@ services:
     container_name: php_docker_tutorial
     volumes:
       - ./src:/var/www/html
+      - ./logs:/var/log
     ports:
       - 85:80
 
