@@ -2,8 +2,9 @@ version: '3.9'
 
 services:
   php-env:
-    build: .
+    # build: .
     container_name: onlinequiz
+    image: fenikz/onlinequiz:1.0.0
     hostname: onlinequiz.fenikz.tk
     volumes:
       - ./src:/var/www/html
