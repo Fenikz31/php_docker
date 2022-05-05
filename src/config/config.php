@@ -20,7 +20,7 @@
     $sql = 'CREATE DATABASE ' . $dbname;
 
     if ( mysqli_query( $conn, $sql )) {
-        echo 'Database my_db created successfully';
+        // echo 'Database my_db created successfully';
     } else {
         echo 'Error creating database: ' . mysqli_error( $conn ) . '\n';
     }
@@ -44,7 +44,7 @@
         $templine = '';
       }
     }
-    echo 'Tables imported successfully';
+    // echo 'Tables imported successfully';
   }
   // mysqli_close( $conn );
 ?> 
