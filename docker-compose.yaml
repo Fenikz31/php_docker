@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: nginx/Dockerfile
     ports: 
-      - 85:80
+      - 86:80
     volumes:
       - ./src/:/var/www/html
       - ./logs/nginx:/var/log/nginx/
@@ -17,3 +17,13 @@ services:
     volumes:
       - ./src:/var/www/html
       - ./logs/php.log:/var/log/fpm-php.www.log
+
+  db:
+    image: mysql
+    container_name: php_docker_tutorial_mysql_db
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - 3307:3306
