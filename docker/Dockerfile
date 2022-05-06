@@ -17,7 +17,7 @@ RUN apt-get update && \
 
 
 # Install PHP Extensions
-RUN docker-php-ext-install zip pdo pdo_mysql mysqli
+RUN docker-php-ext-install zip pdo pdo_mysql mysqli && docker-php-ext-enable zip pdo pdo_mysql mysqli
 
 # Copy composer installable
 COPY ./install-composer.sh ./
