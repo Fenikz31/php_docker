@@ -8,6 +8,7 @@ class LoginController extends Controller
      */
     public function register()
     {
+        echo 'Register function';
         // PAGE AND VIEWS
         $pageId = 2;
         $title = "Registration";
