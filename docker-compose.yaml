@@ -5,15 +5,17 @@ services:
     build:
       context: .
       dockerfile: nginx/Dockerfile
+    container_name: php_docker_tutorial_nginx
     ports: 
       - 86:80
     volumes:
       - ./src/:/var/www/html
       - ./logs/nginx:/var/log/nginx/
   php-env:
-    image: php:fpm-alpine
-    # build: .
-    # container_name: php_docker_tutorial
+    build:
+      context: .
+      dockerfile: php/Dockerfile
+    container_name: php_docker_tutorial
     volumes:
       - ./src:/var/www/html
       - ./logs/php.log:/var/log/fpm-php.www.log
