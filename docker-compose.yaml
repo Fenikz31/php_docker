@@ -2,9 +2,9 @@ version: '3.9'
 
 services:
   php-env:
-    # build: .
+    build: ./docker
     container_name: onlinequiz
-    image: fenikz/onlinequiz:1.0.0
+    image: fenikz/onlinequiz:0.0.1
     volumes:
       - ./src:/var/www/html
       - ./logs:/var/log
